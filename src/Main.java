@@ -3,20 +3,26 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner userInputs = new Scanner(System.in);
-        System.out.println("Enter x");
-        double x = userInputs.nextDouble();
 
-        System.out.println("Enter y");
-        double y = userInputs.nextDouble();
+        try{
+            System.out.println("Enter x");
+            double x = userInputs.nextDouble();
 
-        System.out.println("x is: " + x);
-        System.out.println("y is: " + y);
+            System.out.println("Enter y");
+            double y = userInputs.nextDouble();
 
-        System.out.println("Area of Rectangle:"+area(x,y));
+            System.out.println("x is: " + x);
+            System.out.println("y is: " + y);
 
-        System.out.println("Enter radius");
-        double radius= userInputs.nextDouble();
-        System.out.println("Area of Circle:"+area(radius));
+            System.out.println("Area of Rectangle:"+area(x,y));
+
+            System.out.println("Enter radius");
+            double radius= userInputs.nextDouble();
+            System.out.println("Area of Circle:"+area(radius));
+        } catch (Exception ex){
+            System.out.println("Invalid input.");
+        }
+
 
     }
 
